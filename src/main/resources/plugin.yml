@@ -1,0 +1,11 @@
+name: RedZoneRestore
+version: '${project.version}'
+main: net.vanillaplus.redzonerestore.RedZoneRestore
+api-version: 1.18
+prefix: RedZoneRestore
+depend: [ WorldGuard ]
+commands:
+  rzrreload:
+    permission: redzonerestore.reload
+    aliases:
+      - redzonereload

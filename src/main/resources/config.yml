@@ -1,0 +1,37 @@
+#delay before regenerating terrin (in seconds)
+restoredelay: 30
+
+
+#range of how far apart the blocks should restore(in ticks)
+restoreraterange: 500
+
+#should the plugin remove end crystals?
+removecrystals: true
+
+#list of blocks to automaticly remove after being placed
+removelist:
+  - dirt
+  - grass_block
+  - cobbled_deepslate
+  - deepslate
+  - cobblestone
+  - netherrack
+  - stone
+  - obsidian
+  - glowstone
+  - respawn_anchor
+  - crying_obsidian
+  - sand
+  - granite
+  - andesite
+  - diorite
+
+
+#list of blocks the plugin should place after the blow up
+placelist:
+  - dirt
+  - grass_block
+  - deepslate
+  - stone
+  - red_concrete
+
