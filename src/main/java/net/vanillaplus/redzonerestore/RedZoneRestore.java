@@ -44,6 +44,7 @@ public final class RedZoneRestore extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new BlockPlaceListener(),this);
         Bukkit.getPluginManager().registerEvents(new BlockExplodeListener(),this);
       //  Bukkit.getPluginManager().registerEvents(new EntitySpawnListener(),this);
+        Bukkit.getPluginManager().registerEvents(new BlockBreakListener(),this);
 
     }
 

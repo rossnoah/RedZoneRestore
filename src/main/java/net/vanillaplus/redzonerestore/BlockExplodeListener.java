@@ -20,7 +20,16 @@ public class BlockExplodeListener implements Listener {
                     Material type = b.getType();
                     SchedulerUtils.runLater(()->{
                         if(b.getType()==Material.AIR||b.getType()==Material.FIRE||b.isEmpty()||b.getType()==Material.WATER||b.getType()==Material.LAVA){
-                            b.setType(type);
+                            if(type==Material.SAND){
+                                int down = -1;
+                                if(b.getRelative(0,-1,0).getType()==Material.AIR){
+
+                                }
+
+
+                            }else {
+                                b.setType(type);
+                            }
                         }
 
                     },RedZoneRestore.getInstance().getConfig().getInt("restoredelay")*20+(int)(Math.random()*RedZoneRestore.getInstance().getConfig().getInt("restoreraterange")));
