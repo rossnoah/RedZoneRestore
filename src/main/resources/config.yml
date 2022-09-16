@@ -8,6 +8,9 @@ restoreraterange: 500
 #should the plugin remove end crystals?
 removecrystals: true
 
+#celling level to place blocks (under this level blocks will be place)
+cellinglevel: 70
+
 #list of blocks to automaticly remove after being placed
 removelist:
   - dirt

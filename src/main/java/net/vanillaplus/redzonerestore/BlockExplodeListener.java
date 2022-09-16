@@ -49,15 +49,17 @@ public class BlockExplodeListener implements Listener {
         for(Block b:e.blockList()){
             if(RedZoneRestore.runAtBlock(b)){
 
-                if(isTargetedMaterial(b.getType())){
+                if(b.getLocation().getY()<RedZoneRestore.getInstance().getConfig().getInt("cellinglevel")) {
+                    if (isTargetedMaterial(b.getType())) {
 
-                    Material type = b.getType();
-                    SchedulerUtils.runLater(()->{
-                        if(b.getType()==Material.AIR||b.getType()==Material.FIRE||b.isEmpty()||b.getType()==Material.WATER||b.getType()==Material.LAVA){
-                            b.setType(type);
-                        }
+                        Material type = b.getType();
+                        SchedulerUtils.runLater(() -> {
+                            if (b.getType() == Material.AIR || b.getType() == Material.FIRE || b.isEmpty() || b.getType() == Material.WATER || b.getType() == Material.LAVA) {
+                                b.setType(type);
+                            }
 
-                    },RedZoneRestore.getInstance().getConfig().getInt("restoredelay")*20+(int)(Math.random()*RedZoneRestore.getInstance().getConfig().getInt("restoreraterange")));
+                        }, RedZoneRestore.getInstance().getConfig().getInt("restoredelay") * 20 + (int) (Math.random() * RedZoneRestore.getInstance().getConfig().getInt("restoreraterange")));
+                    }
                 }
 
 
